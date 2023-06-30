@@ -1,0 +1,183 @@
+<project name="Lab3" default="build" basedir=".">
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+    <path id="classpath">
+        <fileset dir="lib" includes="**/*.jar"/>
+    </path>
+
+    <property file="build.properties"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${jar.dir}"/>
+        <delete dir="${javadoc.dir}"/>
+        <delete dir="${native.target.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+
+        <javac srcdir="${src.dir}" destdir="${build.dir}" >
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/lab3.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+                <attribute name="Version" value="${version.number}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="native2ascii">
+        <mkdir dir="${copy_localization_dir}"/>
+        <echo>Native2ASCII coding...</echo>
+        <native2ascii encoding="EUCJIS" src="${localization_dir}" dest="${copy_localization_dir}" includes="**/*.loc"/>
+        <echo>Done.</echo>
+    </target>
+
+    <target name="test" depends="build" >
+        <junit printsummary="yes" haltonfailure="no">
+            <classpath>
+                <path refid="classpath"/>
+                <pathelement location="${test.class.path}"/>
+                <pathelement path="${class.path}"/>
+            </classpath>
+            <formatter type="xml"/>
+            <batchtest fork="yes" todir="${report.dir}">
+                <fileset dir="${test.dir}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+
+    <macrodef name="generate-hash">
+        <attribute name="algorithm"/>
+        <sequential>
+            <signjar jar="${src.dir}/${ant.project.name}.war"
+                     alias="ant_keystore"
+                     storepass="password"
+                     digestalg="@{algorithm}"/>
+        </sequential>
+    </macrodef>
+
+    <target name="doc" depends="build">
+        <mkdir dir="${doc.dir}"/>
+        <generate-hash algorithm="MD5"/>
+        <generate-hash algorithm="SHA1"/>
+        <javadoc destdir="${doc.dir}"
+                 author="true"
+                 version="true"
+                 use="true">
+            <classpath refid="classpath"/>
+            <fileset dir="${src.dir}"/>
+        </javadoc>
+        <jar destfile="${doc.dir}/JavaDoc.jar"
+             basedir="${doc.dir}"
+             update="true">
+        </jar>
+    </target>
+
+    <target name="music" depends="build">
+        <taskdef name="sound" classname="org.apache.tools.ant.taskdefs.optional.sound.SoundTask"/>
+        <sound>
+            <success source="${sounds}"/>
+            <fail source="${music.file}"/>
+        </sound>
+    </target>
+
+
+
+    <target name="diff" depends="build" >
+
+        <loadfile property="params" srcFile="params.props"/>
+        <exec executable="git" outputproperty="differences">
+            <arg value="diff"/>
+            <arg value="--name-only"/>
+        </exec>
+        <var name="commit.flag" unset="true"/>
+        <script language="javascript">
+            var diffs = project.getProperty("differences").split("\n");
+            var params = project.getProperty("params").split("\n");
+            for (var i=0; i&lt;params.length; i++) {
+            for (var j=0; j&lt;diffs.length; j++) {
+            if (params[i] === diffs[j]) {
+            var flag = true;
+            project.setProperty("commit.flag", true);
+            break;
+            }
+            }
+            if (flag) {
+            break;
+            }
+            }
+        </script>
+        <if>
+            <not>
+                <isset property="commit.flag"/>
+            </not>
+            <then>
+                <exec executable="git">
+                    <arg value="add"/>
+                    <arg value="*"/>
+                </exec>
+                <exec executable="git">
+                    <arg value="commit"/>
+                    <arg value="-m"/>
+                    <arg value="'я еблан'"/>
+                </exec>
+            </then>
+            <else>
+                <echo>Commit failed.</echo>
+            </else>
+        </if>
+    </target>
+
+
+    <property name="junit.report.file" value="junit-report.xml" />
+    <property name="git.repository" value="/путь/к/репозиторию" />
+    <property name="git.commit.message" value="Добавлен отчет JUnit" />
+
+
+    <target name="report" depends="test">
+        <junitreport todir="${basedir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="**/TEST-*.xml" />
+            </fileset>
+            <report format="frames" todir="${junit.report.dir}" />
+        </junitreport>
+
+        <copy file="${junit.report.file}" todir="${git.repository}" />
+
+        <exec executable="git" failonerror="true">
+            <arg value="add" />
+            <arg value="${git.repository}/${junit.report.file}" />
+        </exec>
+
+        <exec executable="git" failonerror="true">
+            <arg value="commit" />
+            <arg value="-m" />
+            <arg value="${git.commit.message}" />
+        </exec>
+    </target>
+
+    <target name="env">
+        <exec dir="${wildfly.dir}" executable="${wildfly.start}">
+            <env key="JAVA_OPTS" value="${wildfly.java.opts}"/>
+        </exec>
+    </target>
+</project>

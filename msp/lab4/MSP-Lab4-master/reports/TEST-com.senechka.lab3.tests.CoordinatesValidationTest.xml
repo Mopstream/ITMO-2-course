@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="shizlong-VivoBook-ASUSLaptop-X515JAB-A516JA" name="com.senechka.lab3.tests.CoordinatesValidationTest" skipped="0" tests="1" time="0.083" timestamp="2023-05-19T20:28:06">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="ant.library.dir" value="/usr/share/ant/lib" />
+    <property name="java.specification.version" value="11" />
+    <property name="ant.project.name" value="Lab3" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="src.test" value="src/test" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="jar.dir" value="dist" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="git.commit.message" value="???????? ????? JUnit" />
+    <property name="java.vendor.url" value="https://ubuntu.com/" />
+    <property name="version.number" value="1.0.0" />
+    <property name="jvm.args" value="-Xmx1024m -XX:MaxPermSize=256m" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.senechka.lab3.tests.CoordinatesValidationTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/shizlong/Рабочий стол/Lab3/reports/TEST-com.senechka.lab3.tests.CoordinatesValidationTest.xml crashfile=/home/shizlong/Рабочий стол/Lab3/junitvmwatcher7590437535135002665.properties propsfile=/home/shizlong/Рабочий стол/Lab3/junit17306208077513476487.properties" />
+    <property name="jdk.debug" value="release" />
+    <property name="class.path" value="target/classes" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.version.date" value="2023-04-18" />
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64" />
+    <property name="basedir" value="/home/shizlong/Рабочий стол/Lab3" />
+    <property name="file.separator" value="/" />
+    <property name="javadoc.dir" value="javadoc" />
+    <property name="git.repository" value="src" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="doc.dir" value="doc" />
+    <property name="localization_dir" value="src/main/java/com/senechka/lab3/tests" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="java.runtime.version" value="11.0.19+7-post-Ubuntu-0ubuntu122.04.1" />
+    <property name="user.name" value="shizlong" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="target.dir" value="target" />
+    <property name="wildfly.java.opts" value="-Xms128M" />
+    <property name="build.dir" value="build" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.env" value="1.8" />
+    <property name="java.version" value="11.0.19" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="ant.home" value="/usr/share/ant" />
+    <property name="music.file" value="finish.wav" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="junit.output.dir" value="reports" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.12 compiled on January 17 1970" />
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib" />
+    <property name="manifest.file" value="manifest.mf" />
+    <property name="java.vendor" value="Ubuntu" />
+    <property name="classes.dir" value="classes" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="wildfly.dir" value="/home/shizlong/wildfly-26.1.2.Final/bin" />
+    <property name="ant.file.type" value="file" />
+    <property name="junit.report.dir" value="report" />
+    <property name="java.class.path" value="/home/shizlong/Рабочий стол/Lab3/lib/FastInfoset.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-antlr.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-bcel.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-bsf.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-log4j.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-oro.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-regexp.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-resolver.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-apache-xalan2.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-commons-logging.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-commons-net.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-contrib-0.3.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-contrib-1.0b3.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-imageio.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-jai.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-jakartamail.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-javamail.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-jdepend.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-jmf.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-jsch.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-junit.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-junit4.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-junitlauncher-1.10.7.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-junitlauncher.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-launcher.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-netrexx.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-swing.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-testutil.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant-xz.jar:/home/shizlong/Рабочий стол/Lab3/lib/ant.jar:/home/shizlong/Рабочий стол/Lab3/lib/apiguardian-api-1.0.0.jar:/home/shizlong/Рабочий стол/Lab3/lib/commons-beanutils.jar:/home/shizlong/Рабочий стол/Lab3/lib/commons-collections.jar:/home/shizlong/Рабочий стол/Lab3/lib/commons-digester.jar:/home/shizlong/Рабочий стол/Lab3/lib/commons-logging.jar:/home/shizlong/Рабочий стол/Lab3/lib/el-api-2.2.1-b03.jar:/home/shizlong/Рабочий стол/Lab3/lib/el-api.jar:/home/shizlong/Рабочий стол/Lab3/lib/hamcrest-core-1.3.jar:/home/shizlong/Рабочий стол/Lab3/lib/hibernate-core-5.4.27.Final.jar:/home/shizlong/Рабочий стол/Lab3/lib/hibernate-java8-5.6.15.Final.jar:/home/shizlong/Рабочий стол/Lab3/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar:/home/shizlong/Рабочий стол/Lab3/lib/icefaces-ace.jar:/home/shizlong/Рабочий стол/Lab3/lib/icefaces-compat.jar:/home/shizlong/Рабочий стол/Lab3/lib/icefaces.jar:/home/shizlong/Рабочий стол/Lab3/lib/icepush.jar:/home/shizlong/Рабочий стол/Lab3/lib/javaee-api-8.0.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.annotation.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.ejb.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.faces-2.4.0.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.jms.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.resource.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.servlet.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.servlet.jsp.jar:/home/shizlong/Рабочий стол/Lab3/lib/javax.transaction.jar:/home/shizlong/Рабочий стол/Lab3/lib/jstl.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-4.12.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-jupiter-5.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-jupiter-api-5.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-jupiter-engine-5.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-jupiter-params-5.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-platform-commons-1.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-platform-engine-1.4.2.jar:/home/shizlong/Рабочий стол/Lab3/lib/junit-platform-launcher-1.7.0-M1.jar:/home/shizlong/Рабочий стол/Lab3/lib/jxl.jar:/home/shizlong/Рабочий стол/Lab3/lib/krysalis-jCharts-1.0.0-alpha-1.jar:/home/shizlong/Рабочий стол/Lab3/lib/lib/bcel-5.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/lib/commons-httpclient-3.0.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/lib/commons-logging-1.0.4.jar:/home/shizlong/Рабочий стол/Lab3/lib/lib/ivy-1.3.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/lombok.jar:/home/shizlong/Рабочий стол/Lab3/lib/opentest4j-1.1.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/org.eclipse.persistence.antlr-2.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/org.eclipse.persistence.asm-2.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/org.eclipse.persistence.core-2.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/org.eclipse.persistence.jpa-2.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/org.eclipse.persistence.jpa.jpql-2.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/poi-3.7.jar:/home/shizlong/Рабочий стол/Lab3/lib/portlet2-api.jar:/home/shizlong/Рабочий стол/Lab3/lib/portletfaces-bridge-2.0.2-ice-7875.jar:/home/shizlong/Рабочий стол/Lab3/lib/postgresql-42.2.5.jar:/home/shizlong/Рабочий стол/Lab3/lib/primefaces-6.1-sources.jar:/home/shizlong/Рабочий стол/Lab3/lib/primefaces-6.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/svnant-1.3.jar:/home/shizlong/Рабочий стол/Lab3/lib/svnclientadapter-1.3.jar:/home/shizlong/Рабочий стол/Lab3/lib/svnkit-1.7.8.jar:/home/shizlong/Рабочий стол/Lab3/lib/testng-7.7.1.jar:/home/shizlong/Рабочий стол/Lab3/lib/validation-api-2.0.1.Final.jar:/home/shizlong/Рабочий стол/Lab3/target/classes/com/senechka/lab3/tests:/home/shizlong/Рабочий стол/Lab3/target/classes:/usr/share/java/ant-launcher-1.10.12.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
+    <property name="java.vm.vendor" value="Ubuntu" />
+    <property name="wildfly.start" value="/home/shizlong/wildfly-26.1.2.Final/bin/standalone.sh" />
+    <property name="user.timezone" value="" />
+    <property name="java.vm.specification.version" value="11" />
+    <property name="os.name" value="Linux" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="user.country" value="RU" />
+    <property name="native.src.dir" value="src" />
+    <property name="main.class" value="com.yahyesos.main" />
+    <property name="test.dir" value="src/main/java/" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="user.home" value="/home/shizlong" />
+    <property name="user.language" value="ru" />
+    <property name="ant.java.version" value="11" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="ant.file.Lab3" value="/home/shizlong/Рабочий стол/Lab3/build.xml" />
+    <property name="ant.file" value="/home/shizlong/Рабочий стол/Lab3/build.xml" />
+    <property name="copy_localization_dir" value="copy_localization" />
+    <property name="path.separator" value=":" />
+    <property name="diff.files" value="*.java,*.properties" />
+    <property name="native.target.dir" value="locale_utf8" />
+    <property name="os.version" value="5.15.0-72-generic" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="sounds" value="finish.wav" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="class" value="ant_out/classes" />
+    <property name="report.dir" value="reports" />
+    <property name="ant.core.lib" value="/usr/share/ant/lib/ant.jar" />
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts" />
+    <property name="src" value="src" />
+    <property name="user.dir" value="/home/shizlong/Рабочий стол/Lab3" />
+    <property name="os.arch" value="amd64" />
+    <property name="junit.report.file" value="TESTS-TestSuites.xml" />
+    <property name="test.class.path" value="target/classes/com/senechka/lab3/tests" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="java.vm.version" value="11.0.19+7-post-Ubuntu-0ubuntu122.04.1" />
+    <property name="ant.file.type.Lab3" value="file" />
+    <property name="java.class.version" value="55.0" />
+    <property name="src.dir" value="src" />
+    <property name="user" value="shizlong" />
+    <property name="ant.project.default-target" value="build" />
+  </properties>
+  <testcase classname="com.senechka.lab3.tests.CoordinatesValidationTest" name="initializationError" time="0.005">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
